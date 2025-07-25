@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #FCF5ED;
   --foreground: #171717;
 }
 
@@ -12,15 +12,226 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeIn {
+  from { opacity:0; transform: translateY(40px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+@keyframes fadeInDelay {
+  from { opacity:0; transform: translateY(20px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity:0; transform: translateX(-50px); }
+  to { opacity:1; transform: translateX(0); }
+}
+
+@keyframes fadeInScale {
+  from { opacity:0; transform: scale(0.8); }
+  to { opacity:1; transform: scale(1); }
+}
+
+@keyframes modernFadeZoom {
+  from { opacity: 0; transform: scale(0.7) translateX(-40px); }
+  to { opacity: 1; transform: scale(1) translateX(0); }
+}
+
+@keyframes logoBounce {
+  0% { opacity: 0; transform: translateY(-60px) scale(0.8); }
+  60% { opacity: 1; transform: translateY(10px) scale(1.05); }
+  80% { transform: translateY(-5px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes hero-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out 0.7s both;
+}
+
+.animate-fade-in-delay {
+  animation: fadeInDelay 0.8s ease-out 1s both;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.7s ease-out both;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.7s ease-out 2s both;
+}
+
+.animate-modern-fade-zoom {
+  animation: modernFadeZoom 0.8s cubic-bezier(0.4,0,0.2,1) 0.2s both;
+}
+
+.animate-logo-bounce {
+  animation: logoBounce 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+.animate-hero-fade-in {
+  animation: hero-fade-in 1.2s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+/* Asegurar que las cards estén siempre por delante */
+.cards-front {
+  position: relative;
+  z-index: 9999 !important;
+}
+
+/* Prioridad máxima para Content and Programming Strategy */
+.content-strategy-card {
+  position: relative;
+  z-index: 99999 !important;
+  transform: translateZ(0);
+}
+
+/* Mejorar la funcionalidad de los botones */
+button {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  outline: none;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.5);
+  outline-offset: 2px;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Asegurar que el botón Get in touch sea completamente clickeable */
+.get-in-touch-btn {
+  position: relative;
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.get-in-touch-btn * {
+  pointer-events: none;
+}
+
+/* Estilos para las cards de vinilo */
+.vinyl-card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(249, 250, 251, 0.9) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  animation: slideIn 0.7s ease-out both;
+}
+
+.vinyl-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.vinyl-disc {
+  position: relative;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: rotate 8s linear infinite;
+  animation-play-state: running;
+}
+
+.vinyl-disc::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  background: conic-gradient(from 0deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.vinyl-card:hover .vinyl-disc::before {
+  opacity: 1;
+}
+
+.vinyl-card:hover .vinyl-disc {
+  animation-play-state: paused;
+  transform: scale(1.05);
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Efecto de ondas de sonido */
+.sound-waves {
+  pointer-events: none;
+}
+
+.sound-waves > div > div {
+  animation: soundWave 1.5s ease-in-out infinite;
+}
+
+@keyframes soundWave {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1); }
+}
+
+/* Efecto de brillo en el disco */
+.vinyl-disc::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 25%;
+  height: 25%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(1px);
+}
+
+/* Efecto de surcos más realista */
+.vinyl-disc {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Mejorar la legibilidad del texto en la etiqueta */
+.vinyl-disc .text-center {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
