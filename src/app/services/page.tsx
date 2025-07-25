@@ -145,8 +145,8 @@ export default function Services() {
         <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 animate-slide-in-up font-sans">
           Let’s bring your brand to life.
         </h3>
-        <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in font-sans">
-          Whether you're starting from scratch or looking to scale, we’re here to help you create meaningful content, grow your community, and drive real results. Ready to elevate your digital presence?
+        <p className="text-lg mb-8" style={{ color: '#ff0101', fontFamily: 'Lato, Arial, sans-serif', lineHeight: '1.7' }}>
+          Whether you&apos;re starting from scratch or looking to scale, we’re here to help you create meaningful content, grow your community, and drive real results. Ready to elevate your digital presence?
         </p>
         <motion.a
           whileHover={{ scale: 1.07 }}

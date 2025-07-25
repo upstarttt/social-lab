@@ -5,12 +5,12 @@ import { useState, useEffect } from "react";
 const services = [
   {
     name: "UGC Creation",
-    desc: "Authentic user-generated content to boost your brand's credibility and engagement.",
+    desc: "Authentic user-generated content to boost your brand&apos;s credibility and engagement.",
     icon: "/fotos/ugc.jpg",
   },
   {
     name: "Content and Programming Strategy",
-    desc: "Data-driven strategies to maximize your content's impact across all platforms.",
+    desc: "Data-driven strategies to maximize your content&apos;s impact across all platforms.",
     icon: "/fotos/strategy.jpg",
   },
   {
