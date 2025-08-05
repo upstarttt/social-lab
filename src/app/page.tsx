@@ -112,7 +112,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col items-center justify-center overflow-x-hidden">
       {/* Hero estilo rebranding sin efecto cristal */}
       <div
-        className="relative w-full h-[80vh] flex items-center justify-start"
+        className="relative w-full h-screen flex items-center justify-start"
         style={{
           backgroundImage: "url('/sombrillas-inicio.jpg')",
           backgroundSize: "cover",
@@ -120,12 +120,12 @@ export default function Home() {
         }}
       >
         {/* TEXTO HERO SUBIDO Y ANIMADO */}
-        <div className="absolute top-8 md:top-16 left-1/2 -translate-x-1/2 flex flex-col items-center w-full z-20 animate-hero-fade-in mt-24">
-          <span className="text-white tracking-[0.5em] text-2xl md:text-4xl font-bold mb-1 md:mb-2" style={{ letterSpacing: '0.5em' }}>
+        <div className="absolute top-8 md:top-16 left-1/2 -translate-x-1/2 flex flex-col items-center w-full z-20 animate-hero-fade-in mt-16 md:mt-24">
+          <span className="text-white tracking-[0.3em] md:tracking-[0.5em] text-xl md:text-4xl font-bold mb-2 md:mb-2 px-4 text-center" style={{ letterSpacing: '0.3em' }}>
             {welcomeText}
             {welcomeTyping && <span className="animate-blink">|</span>}
           </span>
-          <Image src="/mi-logo.png" alt="Logo Social Lab" width={512} height={512} className="w-72 md:w-[32rem] h-auto drop-shadow-xl -mt-40 md:-mt-56" />
+          <Image src="/mi-logo.png" alt="Logo Social Lab" width={512} height={512} className="w-64 md:w-[32rem] h-auto drop-shadow-xl -mt-32 md:-mt-56 px-4" priority />
         </div>
         {/* Fin texto hero animado */}
       </div>
@@ -133,7 +133,7 @@ export default function Home() {
 
       {/* Nueva sección de servicios con bloques */}
       <section className="w-full max-w-6xl mx-auto mb-20 px-4 animate-fade-in">
-        <h2 className="text-6xl md:text-7xl font-extrabold text-center mt-32 mb-32 animate-fade-in" style={{ fontFamily: 'Century Gothic, Futura, Arial, sans-serif', letterSpacing: '1px', lineHeight: '1.1', textTransform: 'uppercase' }}>
+        <h2 className="text-4xl md:text-7xl font-extrabold text-center mt-16 md:mt-32 mb-16 md:mb-32 animate-fade-in px-4" style={{ fontFamily: 'Century Gothic, Futura, Arial, sans-serif', letterSpacing: '1px', lineHeight: '1.1', textTransform: 'uppercase' }}>
           WE CREATE. <span style={{ color: '#9D2235' }}>YOU GROW.</span>
         </h2>
         {/* Block 1 — Core Services */}

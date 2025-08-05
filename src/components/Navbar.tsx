@@ -46,7 +46,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`liquid-glass-bar fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[90vw] max-w-5xl flex items-center justify-between px-6 py-0 transition-all duration-300 overflow-visible items-center
+              className={`liquid-glass-bar fixed top-3 md:top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95vw] md:w-[90vw] max-w-5xl flex items-center justify-between px-3 md:px-6 py-0 transition-all duration-300 overflow-visible items-center
         ${scrolled
           ? 'bg-white/20 backdrop-blur-2xl border border-white/60 rounded-full'
           : 'bg-transparent border-none rounded-none backdrop-blur-0'}
@@ -56,7 +56,7 @@ export default function Navbar() {
       <div className="flex items-center gap-2 overflow-visible">
         <Logo />
       </div>
-      <ul className="flex-1 flex justify-center gap-8 font-semibold text-gray-800 items-center">
+      <ul className="flex-1 flex justify-center gap-3 md:gap-8 font-semibold text-gray-800 items-center text-sm md:text-base">
         <li>
           <Link href="/" className="px-2 py-1 focus:outline-none transition border-b-2 border-transparent hover:border-black">Home</Link>
         </li>
