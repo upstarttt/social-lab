@@ -85,7 +85,7 @@ export default function Navbar() {
 
       {/* Mobile Navbar */}
       <nav
-        className={`fixed top-3 left-1/2 transform -translate-x-1/2 z-50 w-[95vw] flex items-center justify-between px-4 py-2 transition-all duration-300 md:hidden
+        className={`fixed top-3 left-1/2 transform -translate-x-1/2 z-50 w-[95vw] flex items-center justify-between px-4 py-3 transition-all duration-300 md:hidden
         ${scrolled
           ? 'bg-white/20 backdrop-blur-2xl border border-white/60 rounded-full'
           : 'bg-transparent border-none rounded-none backdrop-blur-0'}
@@ -99,7 +99,7 @@ export default function Navbar() {
         {/* Hamburger Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex flex-col items-center justify-center w-8 h-8 space-y-1 focus:outline-none"
+          className="flex flex-col items-center justify-center w-10 h-10 space-y-1 focus:outline-none"
         >
           <span className={`block w-6 h-0.5 bg-gray-800 transform transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
           <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>

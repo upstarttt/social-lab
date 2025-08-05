@@ -132,13 +132,13 @@ export default function Services() {
         ))}
       </motion.div>
 
-      {/* CTA final, sticky en móvil */}
+      {/* CTA final - elemento normal sin sticky */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="mt-20 max-w-2xl w-full bg-white rounded-3xl shadow-lg p-10 text-center border border-gray-200 animate-fade-in-scale z-10 mx-auto mb-8"
+        className="relative mt-20 max-w-2xl w-full bg-white rounded-3xl shadow-lg p-8 md:p-10 text-center border border-gray-200 mx-auto mb-12"
         style={{boxShadow: '0 8px 32px 0 rgba(255,1,1,0.10)'}}
       >
         <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 animate-slide-in-up font-sans">

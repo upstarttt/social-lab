@@ -120,12 +120,12 @@ export default function Home() {
         }}
       >
         {/* DESKTOP HERO - COMPLETAMENTE LOCKEADO */}
-        <div className="hidden md:block absolute top-16 left-1/2 -translate-x-1/2 flex flex-col items-center w-full z-20 animate-hero-fade-in mt-24">
-          <span className="text-white tracking-[0.5em] text-4xl font-bold mb-2" style={{ letterSpacing: '0.5em' }}>
+        <div className="hidden md:flex absolute top-8 left-1/2 -translate-x-1/2 flex-col items-center w-full z-20 animate-hero-fade-in mt-24">
+          <span className="text-white tracking-[0.5em] text-4xl font-bold mb-1" style={{ letterSpacing: '0.5em' }}>
             {welcomeText}
             {welcomeTyping && <span className="animate-blink">|</span>}
           </span>
-          <Image src="/mi-logo.png" alt="Logo Social Lab" width={512} height={512} className="w-[32rem] h-auto drop-shadow-xl -mt-56" priority />
+          <Image src="/mi-logo.png" alt="Logo Social Lab" width={512} height={512} className="w-[32rem] h-auto drop-shadow-xl -mt-40" priority />
         </div>
         
         {/* MOBILE HERO - OPTIMIZADO PARA MÓVIL */}
