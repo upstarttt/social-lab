@@ -92,14 +92,14 @@ export default function Navbar() {
       `}
         style={{ boxShadow: 'none' }}
       >
-        <div className="flex items-center gap-2 overflow-visible">
+        <div className="flex items-center gap-2 overflow-visible flex-shrink-0">
           <Logo />
         </div>
         
         {/* Hamburger Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex flex-col items-center justify-center w-10 h-10 space-y-1 focus:outline-none"
+          className="flex flex-col items-center justify-center w-10 h-10 gap-1 focus:outline-none"
         >
           <span className={`block w-6 h-0.5 bg-gray-800 transform transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
           <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
