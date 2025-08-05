@@ -2,61 +2,62 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-const services = [
-  {
-    name: "UGC Creation",
-    desc: "Authentic user-generated content to boost your brand&apos;s credibility and engagement.",
-    icon: "/fotos/ugc.jpg",
-  },
-  {
-    name: "Content and Programming Strategy",
-    desc: "Data-driven strategies to maximize your content&apos;s impact across all platforms.",
-    icon: "/fotos/strategy.jpg",
-  },
-  {
-    name: "Video and Photo Editing",
-    desc: "Professional editing for stunning visuals that capture your audience.",
-    icon: "/fotos/editing.jpg",
-  },
-  {
-    name: "Social Media Planning",
-    desc: "Comprehensive planning to grow your online presence and community.",
-    icon: "/fotos/social.jpg",
-  },
-  {
-    name: "Marketing Strategy",
-    desc: "Innovative marketing solutions tailored to your business goals.",
-    icon: "/fotos/marketing.jpg",
-  },
-  {
-    name: "Community Management",
-    desc: "Building and nurturing loyal communities around your brand.",
-    icon: "/fotos/community.jpg",
-  },
-];
+// Variables comentadas - no se usan actualmente pero se mantendrán para uso futuro
+// const services = [
+//   {
+//     name: "UGC Creation",
+//     desc: "Authentic user-generated content to boost your brand&apos;s credibility and engagement.",
+//     icon: "/fotos/ugc.jpg",
+//   },
+//   {
+//     name: "Content and Programming Strategy",
+//     desc: "Data-driven strategies to maximize your content&apos;s impact across all platforms.",
+//     icon: "/fotos/strategy.jpg",
+//   },
+//   {
+//     name: "Video and Photo Editing",
+//     desc: "Professional editing for stunning visuals that capture your audience.",
+//     icon: "/fotos/editing.jpg",
+//   },
+//   {
+//     name: "Social Media Planning",
+//     desc: "Comprehensive planning to grow your online presence and community.",
+//     icon: "/fotos/social.jpg",
+//   },
+//   {
+//     name: "Marketing Strategy",
+//     desc: "Innovative marketing solutions tailored to your business goals.",
+//     icon: "/fotos/marketing.jpg",
+//   },
+//   {
+//     name: "Community Management",
+//     desc: "Building and nurturing loyal communities around your brand.",
+//     icon: "/fotos/community.jpg",
+//   },
+// ];
 
-const portfolio = [
-  {
-    title: "Brand Refresh for TechCo",
-    desc: "Revamped branding and digital presence for a leading tech startup.",
-    image: "/fotos/portfolio1.jpg",
-  },
-  {
-    title: "Viral UGC Campaign",
-    desc: "Generated over 1M impressions with a creative UGC campaign.",
-    image: "/fotos/portfolio2.jpg",
-  },
-  {
-    title: "Social Growth for Retailer",
-    desc: "Doubled social media followers in 6 months for a retail client.",
-    image: "/fotos/portfolio3.jpg",
-  },
-];
+// const portfolio = [
+//   {
+//     title: "Brand Refresh for TechCo",
+//     desc: "Revamped branding and digital presence for a leading tech startup.",
+//     image: "/fotos/portfolio1.jpg",
+//   },
+//   {
+//     title: "Viral UGC Campaign",
+//     desc: "Generated over 1M impressions with a creative UGC campaign.",
+//     image: "/fotos/portfolio2.jpg",
+//   },
+//   {
+//     title: "Social Growth for Retailer",
+//     desc: "Doubled social media followers in 6 months for a retail client.",
+//     image: "/fotos/portfolio3.jpg",
+//   },
+// ];
 
 const typewriterTexts = ["we create", "you grow"];
 
 export default function Home() {
-  const [showHero, setShowHero] = useState(true);
+  const [showHero] = useState(true);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
@@ -124,7 +125,7 @@ export default function Home() {
             {welcomeText}
             {welcomeTyping && <span className="animate-blink">|</span>}
           </span>
-          <img src="/mi-logo.png" alt="Logo Social Lab" className="w-72 md:w-[32rem] h-auto drop-shadow-xl -mt-40 md:-mt-56" />
+          <Image src="/mi-logo.png" alt="Logo Social Lab" width={512} height={512} className="w-72 md:w-[32rem] h-auto drop-shadow-xl -mt-40 md:-mt-56" />
         </div>
         {/* Fin texto hero animado */}
       </div>
@@ -230,8 +231,8 @@ export default function Home() {
       {/* Contact / Call to Action */}
       <section id="contact" className="w-full max-w-3xl mx-auto mb-20 px-4 animate-fade-in-scale">
         <div className="bg-white/90 rounded-2xl shadow-lg p-8 md:p-12 border border-gray-200 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#9D2235' }}>Let's Work Together</h2>
-          <p className="text-lg mb-6" style={{ color: '#9D2235' }}>Ready to take your brand to the next level? Contact us today and let's create something amazing together.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#9D2235' }}>Let&apos;s Work Together</h2>
+          <p className="text-lg mb-6" style={{ color: '#9D2235' }}>Ready to take your brand to the next level? Contact us today and let&apos;s create something amazing together.</p>
           <button 
             onClick={() => {
               window.location.href = 'mailto:hello@sociallab.com';

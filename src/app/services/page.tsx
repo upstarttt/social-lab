@@ -93,7 +93,7 @@ export default function Services() {
           },
         }}
       >
-        {services.map((service, i) => (
+        {services.map((service) => (
           <motion.div
             key={service.title}
             variants={{

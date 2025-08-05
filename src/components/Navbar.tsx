@@ -3,14 +3,15 @@ import Logo from "@/components/Logo";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
-const services = [
-  { name: "UGC Creation", href: "#ugc-creation" },
-  { name: "Content and programming strategy", href: "#content-strategy" },
-  { name: "Video and photo editing", href: "#video-photo" },
-  { name: "Social media planning", href: "#social-media" },
-  { name: "Marketing strategy", href: "#marketing-strategy" },
-  { name: "Community management", href: "#community-management" },
-];
+// Variable comentada - no se usa actualmente pero se mantiene para uso futuro
+// const services = [
+//   { name: "UGC Creation", href: "#ugc-creation" },
+//   { name: "Content and programming strategy", href: "#content-strategy" },
+//   { name: "Video and photo editing", href: "#video-photo" },
+//   { name: "Social media planning", href: "#social-media" },
+//   { name: "Marketing strategy", href: "#marketing-strategy" },
+//   { name: "Community management", href: "#community-management" },
+// ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
